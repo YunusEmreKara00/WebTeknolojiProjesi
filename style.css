@@ -1,0 +1,122 @@
+/* Arka Plan ve Yazı Rengi */
+body {
+    background: linear-gradient(180deg, #121212 0%, #000000 100%) !important;
+    background-attachment: fixed; /* Sayfa kayarsa arka plan sabit kalsın diye */
+    color: #ffffff !important; /* Metin rengi beyaz yaptım  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+/* Başlıklar */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff; /* Başlıkların rengi */
+    font-weight: 700;
+    letter-spacing: 1px; /* Harfler arasında hafif boşluk bıraktım */
+}
+
+/*  "Code, Finance & Streetwear" Yazısının rengini ayarladım */
+.text-primary {
+    color: #888888 !important; 
+}
+
+.btn-primary {
+    background: none !important;
+    border: none !important;
+    /*  alt çerçeve tasarımı */
+    border-bottom: 2px solid #555 !important; 
+    color: #ffffff !important;
+    border-radius: 0 !important;
+    padding: 8px 5px !important;
+    margin-right: 25px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    /* Hover efekti için geçiş süresi */
+    transition: 0.4s ease; 
+}
+
+.btn-primary:hover {
+    border-bottom: 2px solid #ffffff !important;
+    letter-spacing: 4px;
+}
+
+/* Profil.jpg için  */
+img {
+    border-radius: 8px;
+    filter: grayscale(30%) contrast(110%); /* Fotoğrafı daha soluk ve kontrastlı yaptım  */
+    border: 2px solid #222222; /* Etrafına koyu gri çerçeve */
+}
+
+/* Üst Menü Ayarı */
+.bg-dark {
+    background-color: #000000 !important; /* Navbar'ı tam siyah yaptık */
+    border-bottom: 1px solid #1a1a1a; /* Altına çok hafif bir çizgi çektik siteyle karışmasın diye */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #aaaaaa;
+    text-transform: uppercase; /* Menü yazılarını tamamen büyük harf yaptım */
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+/* profil.jpg ye hover efekti */
+.img-fluid {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.img-fluid:hover {
+    transform: scale(1.03); /* Hafifçe büyümesi için */
+    filter: brightness(1.1); /* Biraz aydınlanma */
+}
+
+
+/* Menü linklerinin altına animasyonlu çizgi için */
+.nav-link {
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff; /* Çizgi rengi beyaz */
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Mouse gelince çizgi boydan boya uzuyor. */
+}
+/* Kaydırma çubuğu için */
+
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444444; /* Kaydırdığımız o çubuğun rengi */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; /* Üzerine gelince beyaz parlıyor. */
+}
+
+/* Metinlerin mouse la üstünden geçince mavi renk olmasın diye */
+::selection {
+    background-color: #ffffff; /* Seçilen metnin arka planı beyaz olur */
+    color: #000000; /* Seçilen metnin kendisi siyah olur */
+}

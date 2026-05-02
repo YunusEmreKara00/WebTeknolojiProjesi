@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yunus Emre Kara | Web Projesi</title>
     
-    <!-- Bootstrap CSS (Responsive tasarım için) -->
+    <!-- Bootstrap CSS  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Harici CSS dosyası -->
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <!-- Navigasyon Menüsü -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Yunus Emre Kara</a>
@@ -22,7 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.php">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.php">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">İlgi Alanlarım</a></li>
@@ -36,25 +36,32 @@
     <!-- Ana İçerik Alanı -->
 <div class="container mt-5 py-5">
     <div class="row align-items-center">
-        <!-- Sol taraf: Tanıtım Metni -->
+        <!-- Sol taraf Tanıtım Metni kısmı -->
         <div class="col-md-7 text-start">
             <h1 class="display-3 fw-bold">Yunus Emre Kara</h1>
             <h2 class="h4 text-primary mb-4">Code, Finance & Streetwear</h2>
             <p class="lead">
-                Sakarya Üniversitesi'nde bilgisayar mühendisliği öğrencisiyim. 
-                Web teknolojileri ve yazılım üzerine kendimi geliştirirken, arka planda borsa analizi, müzik, spor ve
-                modern sokak modası (streetwear) ile ilgileniyorum.
+                Sakarya Üniversitesi'nde Bilgisayar Mühendisliği 1.Sınıf öğrencisiyim. 
+                Web teknolojileri ve yazılım üzerine kendimi geliştirirken arka planda borsa,
+                 müzik, spor ve modern sokak modası ile ilgileniyorum.
             </p>
             <p>
-                Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisi olarak, karmaşık problemleri kodla çözmenin ötesinde, hayatın farklı alanlarındaki dinamikleri keşfetmeyi seviyorum. Analitik bakış açımı borsa ve finans dünyasındaki kısa vadeli stratejilerimle beslerken; basketbol ve futbolun getirdiği rekabetçi ruhu sporun her dalında hissediyorum. Müziğin ritmini ve modern sokak modasının (streetwear) estetiğini, teknik projelerimin tasarım süreçlerine birer ilham kaynağı olarak entegre ediyorum. Bu site, mühendislik disipliniyle kişisel tutkularımın birleştiği dijital bir portfolyodur.
+                Sakarya Üniversitesi’nde bilgisayar mühendisliği okuyorum ama hayatım sadece kod yazmaktan ibaret değil.
+                 Bilgisayar oyunlarını ve esporu takip etmeyi çok severim, her ne kadar oyunlarda pek iddialı olmasam da bu dünyanın içindeyim.
+                  Boş vakitlerimde borsa ile uğraşıyor, ufak tefek işlemlerle hem tecrübe hem de kâr elde etmeye çalışıyorum.
+
+                 Müzik benim için bir yolculuk gibi; elektro gitar ve metal müzikle hayatımın merkezine koyduğum dönemlerden geçtim, şimdilerde ise rap ve R&B ritimlerine, özellikle Drake ve Kanye West'e kafayı takmış durumdayım. 
+                 Bu ilgi alanlarım giyim tarzıma da yansıyor; Amerikan streetwear kültüründen ve rapçilerin stilinden etkileniyorum.
+                  Spor tarafında ise NBA, Avrupa futbolu ve özellikle vazgeçilmezim olan Galatasaray'ın sıkı bir takipçisiyim; fırsat buldukça stadyumda o atmosferi solumayı seviyorum.
+
             </p>
             <div class="mt-4">
-                <a href="#hobiler" class="btn btn-primary btn-lg px-4 me-2">Hobilerimi Gör</a>
-                <a href="#" class="btn btn-outline-light btn-lg px-4">Özgeçmişim</a>
+                <a href="#hobiler" class="btn btn-primary">Hobilerimi Gör</a>
+                <a href="#" class="btn btn-primary">Özgeçmişim</a>
             </div>
         </div>
 
-        <!-- Sağ taraf: Profil Fotoğrafı  -->
+        <!-- Sağ taraf Profil Fotoğrafı kısmı -->
         <div class="col-md-5 text-center mt-4 mt-md-0">
             <img src="img/profil.jpg" alt="Yunus Emre Kara" class="img-fluid rounded-4 shadow-lg border border-secondary" style="max-height: 400px; width: 100%; object-fit: cover;">
         </div>
