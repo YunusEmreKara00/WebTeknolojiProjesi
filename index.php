@@ -24,7 +24,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.php">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="istanbul.php">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Takımımız</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-2" href="#">Login</a></li>
@@ -47,12 +48,12 @@
             </p>
             <p>
                 Sakarya Üniversitesi’nde bilgisayar mühendisliği okuyorum ama hayatım sadece kod yazmaktan ibaret değil.
-                 Bilgisayar oyunlarını ve esporu takip etmeyi çok severim, her ne kadar oyunlarda pek iddialı olmasam da bu dünyanın içindeyim.
+                 Bilgisayar oyunlarını ve esporu takip etmeyi çok severim, her ne kadar oyunlarda pek iddialı olmasam da arkadaşlarımla eğlenip stres atmak güzel oluyor.
                   Boş vakitlerimde borsa ile uğraşıyor, ufak tefek işlemlerle hem tecrübe hem de kâr elde etmeye çalışıyorum.
 
                  Müzik benim için bir yolculuk gibi; elektro gitar ve metal müzikle hayatımın merkezine koyduğum dönemlerden geçtim, şimdilerde ise rap ve R&B ritimlerine, özellikle Drake ve Kanye West'e kafayı takmış durumdayım. 
                  Bu ilgi alanlarım giyim tarzıma da yansıyor; Amerikan streetwear kültüründen ve rapçilerin stilinden etkileniyorum.
-                  Spor tarafında ise NBA, Avrupa futbolu ve özellikle vazgeçilmezim olan Galatasaray'ın sıkı bir takipçisiyim; fırsat buldukça stadyumda o atmosferi solumayı seviyorum.
+                  Spor tarafında ise NBA, Avrupa futbolu ve özellikle vazgeçilmezim olan Galatasaray'ın sıkı bir takipçisiyim; fırsat buldukça stadyumda bulunup takımımı destekliyorum.
 
             </p>
             <div class="mt-4">
