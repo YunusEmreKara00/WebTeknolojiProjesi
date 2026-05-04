@@ -25,7 +25,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.php">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link active" href="istanbul.php">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Takımımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-2" href="#">Login</a></li>
@@ -41,7 +41,7 @@
             <h2 class="h4 text-primary mb-4">Dünyanın Merkezi ve Doğup Büyüdüğüm Yer: İstanbul</h2>
         </div>
 
-        <!-- 5 resimli slider -->
+        <!-- 5 resimli slider ekledim -->
         <div class="row justify-content-center mb-5">
             <div class="col-md-9">
                 <div id="istanbulSlider" class="carousel slide shadow-lg" data-bs-ride="carousel">
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <!-- ŞEHİR TANITIM METNİ  -->
+        <!-- Şehir tanıtım paragrafı ekledim kendi yorumlarımla  -->
         <div class="row justify-content-center mb-5">
     <div class="col-md-10 text-center text-md-start">
         <p class="lead" style="color: #cccccc; line-height: 1.8;">
