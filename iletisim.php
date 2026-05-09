@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Yunus Emre Kara</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.php">YUNUS EMRE KARA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ozgecmis.php">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="istanbul.php">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold text-warning" href="iletisim.php">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container main-container" id="app" style="margin-top: 100px; margin-bottom: 50px;">
+        <header class="row text-center mb-4">
+            <div class="col-12">
+                <h1 class="display-4 fw-bold text-white">İLETİŞİM FORMU</h1>
+            </div>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <section class="cv-card shadow-lg p-4 rounded" style="background-color: #1a1a1a; border: 1px solid #333;">
+                    <h2 class="section-title text-warning border-bottom border-secondary pb-2 mb-4">
+                        <i class="bi bi-envelope-paper-fill me-2"></i> Mesaj Gönder
+                    </h2>
+                    
+                    <form id="contactForm" action="iletisim_sonuc.php" method="POST">
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="isim" class="form-label text-white">Adınız Soyadınız</label>
+                                <input type="text" class="form-control bg-dark text-white border-secondary" id="isim" name="isim" v-model.trim="formData.isim" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label text-white">E-Posta Adresi</label>
+                                <input type="email" class="form-control bg-dark text-white border-secondary" id="email" name="email" v-model.trim="formData.email" placeholder="ornek@mail.com" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefon" class="form-label text-white">Telefon Numarası (11 Hane)</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="telefon" name="telefon" v-model.trim="formData.telefon" placeholder="Örn: 05414466036" maxlength="11" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="konu" class="form-label text-white">Konu Seçiniz</label>
+                            <select class="form-select bg-dark text-white border-secondary" id="konu" name="konu" v-model="formData.konu" required>
+                                <option value="" disabled>Lütfen bir konu seçin...</option>
+                                <option value="Yazılım Projeleri">Yazılım Projeleri</option>
+                                <option value="Finansal Analiz & Borsa">Finansal Analiz & Borsa</option>
+                                <option value="İş Birliği">İş Birliği</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block text-white">Cinsiyetiniz</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="cinsiyet" id="erkek" value="Erkek" v-model="formData.cinsiyet" required>
+                                <label class="form-check-label text-light" for="erkek">Erkek</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="cinsiyet" id="kadin" value="Kadın" v-model="formData.cinsiyet" required>
+                                <label class="form-check-label text-light" for="kadin">Kadın</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="mesaj" class="form-label text-white">Mesajınız (Max 500 Karakter)</label>
+                            <textarea class="form-control bg-dark text-white border-secondary" id="mesaj" name="mesaj" rows="4" maxlength="500" v-model.trim="formData.mesaj" required></textarea>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="onay" name="onay" value="Evet" v-model="formData.onay" required>
+                            <label class="form-check-label small text-light" for="onay">Verilerimin işlenmesini onaylıyorum.</label>
+                        </div>
+
+                        <div id="loading-screen" class="text-center py-3 text-warning" style="display: none;">
+                            <div class="spinner-border text-warning" role="status"></div>
+                            <p class="mt-2 fw-bold">Mesajınız güvenli bir şekilde sunucuya iletiliyor...</p>
+                        </div>
+
+                        <div id="form-buttons" class="d-grid gap-2 d-md-flex justify-content-md-end border-top border-secondary pt-3">
+                            <button type="reset" class="btn btn-secondary px-3"><i class="bi bi-trash"></i> Temizle</button>
+                            <button type="button" class="btn btn-outline-light px-3" onclick="validateNative()">JS ile Doğrula</button>
+                            <button type="button" class="btn btn-warning px-3 fw-bold" @click="validateVue">Vue.js Doğrula</button>
+                            <button type="submit" class="btn btn-primary px-3"><i class="bi bi-send"></i> Klasik Gönder</button>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-center py-4 border-top border-secondary mt-auto">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2026 Yunus Emre Kara. Semantik HTML5 ve Bootstrap ile kodlanmıştır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function triggerLoading() {
+            document.getElementById('form-buttons').style.display = 'none';
+            document.getElementById('loading-screen').style.display = 'block';
+            setTimeout(() => { document.getElementById('contactForm').submit(); }, 1000);
+        }
+
+        function validateNative() {
+            let hatalar = "";
+            let isim = document.getElementById('isim').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let telefon = document.getElementById('telefon').value.trim();
+            let konu = document.getElementById('konu').value;
+            let mesaj = document.getElementById('mesaj').value.trim();
+            let cinsiyetSecili = document.querySelector('input[name="cinsiyet"]:checked');
+            let onay = document.getElementById('onay').checked;
+
+            if(isim === "") hatalar += "• İsim boş bırakılamaz.\n";
+            
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(email === "") hatalar += "• E-Posta boş bırakılamaz.\n";
+            else if(!emailRegex.test(email)) hatalar += "• E-Posta formatı hatalı.\n";
+
+            let telefonRegex = /^[0-9]{11}$/;
+            if(telefon === "") hatalar += "• Telefon boş bırakılamaz.\n";
+            else if(!telefonRegex.test(telefon)) hatalar += "• Telefon SADECE 11 haneli rakamlardan oluşmalıdır.\n";
+
+            if(konu === "") hatalar += "• Konu seçiniz.\n";
+            if(!cinsiyetSecili) hatalar += "• Cinsiyet seçiniz.\n";
+            if(mesaj === "") hatalar += "• Mesaj yazınız.\n";
+            if(!onay) hatalar += "• Onay kutusunu işaretleyiniz.\n";
+
+            if(hatalar !== "") {
+                alert("NATIVE JS HATALARI:\n" + hatalar);
+            } else {
+                triggerLoading();
+            }
+        }
+
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    formData: { isim: '', email: '', telefon: '', konu: '', cinsiyet: '', mesaj: '', onay: false }
+                }
+            },
+            methods: {
+                validateVue() {
+                    let vueHatalari = [];
+                    if (!this.formData.isim) vueHatalari.push("• İsim boş bırakılamaz.");
+                    
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!this.formData.email) vueHatalari.push("• E-Posta boş bırakılamaz.");
+                    else if (!emailRegex.test(this.formData.email)) vueHatalari.push("• E-Posta formatı hatalı.");
+
+                    const telefonRegex = /^[0-9]{11}$/;
+                    if (!this.formData.telefon) vueHatalari.push("• Telefon boş bırakılamaz.");
+                    else if (!telefonRegex.test(this.formData.telefon)) vueHatalari.push("• Telefon SADECE 11 haneli rakamlardan oluşmalıdır.");
+
+                    if (!this.formData.konu) vueHatalari.push("• Konu seçiniz.");
+                    if (!this.formData.cinsiyet) vueHatalari.push("• Cinsiyet seçiniz.");
+                    if (!this.formData.mesaj) vueHatalari.push("• Mesaj yazınız.");
+                    if (!this.formData.onay) vueHatalari.push("• Onay kutusunu işaretleyiniz.");
+
+                    if (vueHatalari.length > 0) {
+                        alert("VUE.JS HATALARI:\n" + vueHatalari.join('\n'));
+                    } else {
+                        triggerLoading();
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link active" href="istanbul.php">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
                     <li class="nav-item"><a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-2" href="#">Login</a></li>
                 </ul>
             </div>
