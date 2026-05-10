@@ -136,3 +136,17 @@ img {
 
 /* Form Gönderilirken Çıkan Yükleme Ekranı */
 #loading-screen { display: none; }
+/* =========================================
+   GENEL YAPI VE İLETİŞİM FORMU AYARLARI
+   ========================================= */
+
+/* Sayfa içeriklerinin navbar altında kalmasını ve footer'a yapışmasını engelliyo */
+.main-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* İletişim sayfasındaki yükleme ekranı başlangıçta gizli olmalı */
+#loading-screen {
+    display: none;
+}
