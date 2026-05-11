@@ -150,3 +150,26 @@ img {
 #loading-screen {
     display: none;
 }
+/* --- İLGE ALANLARI RESİM DÜZENLEME  --- */
+
+/* API'den gelen müzik kapakları ve  resimlerin hepsini aynı boya sabitledim */
+.api-image, .card-img-custom, .card-img-horizontal {
+    width: 100% !important;
+    height: 250px !important; 
+    object-fit: cover !important; 
+    object-position: center !important;
+    border-radius: 8px !important;
+}
+
+/* Kartların boylarını birbirine eşitlemek için */
+.interest-card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content:间-between !important;
+}
+
+/* Kartın içindeki yazılarla resim arasında boşluk bırakma */
+.interest-card img {
+    margin-top: auto; 
+}

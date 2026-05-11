@@ -58,7 +58,7 @@
             </p>
             <!-- Buton ekledim daha rahat ulaşılsın diye -->
             <div class="mt-4">
-                <a href="#hobiler" class="btn btn-primary">Hobilerimi Gör</a>
+                <a href="ilgialanlarim.php" class="btn btn-primary">Hobilerimi Gör</a>
                 <a href="ozgecmis.php" class="btn btn-primary">Özgeçmişim</a>
             </div>
         </div> 

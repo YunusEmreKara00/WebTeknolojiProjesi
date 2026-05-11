@@ -66,36 +66,40 @@
         </section>
 
         <section class="mb-5">
-            <h2 class="section-title">Spor Sevgim</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="interest-card p-4">
-                        <h4 class="text-warning">Global Futbol ve Galatasaray</h4>
-                        <p class="text-white mb-0" style="line-height: 1.7;">Futboldan çok bahsettim ama ilgi alanlarım kısmına da koymazsam olmazdı.
-                             Galatasaray ile birlikte Avrupa Futbolunu izlemeyi takip etmeyi hayatımın bir parçası haline getirdim. Ayriyetten Messi gibi bana göre tarihin en iyi futbolcusununda Amerikadaki maçlarını da takip ediyorum.
-                             En çok sevdiğim futbol figürleri Messi, Osimhen, Uğurcan Çakır, Neymar ve Salah...</p>
-                        <img src="img/futbol.jpg" alt="Futbol Taktik" class="card-img-custom mt-auto">
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="interest-card p-4">
-                        <h4 class="text-warning">NBA ve Gece Mesaisi</h4>
-                        <p class="text-white mb-0" style="line-height: 1.7;">Basketboldan bahsetmesem olmazdı hem spor olarak hem de moda kültürü olarak takip etmekten zevk alıyorum.
-                            Maçlar ABD saatine göre oynandığı için maalesef Türkiye'de gece saatlerine denk geliyor. Playofflar dışında çok fazla izleme şansım olmuyor.
-                            Desteklediğim takımlar Alperen Şengün etkisiyle Houston Rockets ve Stephen Curry etkisiyle Golden State Warriors.
-                        </p>
-                        <img src="img/nba.jpg" alt="NBA Atmosferi" class="card-img-custom mt-auto">
-                    </div>
-                </div>
+    <h2 class="section-title">Spor Sevgim</h2>
+    <div class="row align-items-stretch">
+        
+        <div class="col-md-6 mb-4">
+            <div class="interest-card p-4 d-flex flex-column h-100">
+                <h4 class="text-warning">Global Futbol ve Galatasaray</h4>
+                <p class="text-white mb-3" style="line-height: 1.7;">
+                    Futboldan çok bahsettim ama ilgi alanlarım kısmına da koymazsam olmazdı. Galatasaray ile birlikte Avrupa Futbolunu izlemeyi takip etmeyi hayatımın bir parçası haline getirdim. Ayriyetten Messi gibi bana göre tarihin en iyi futbolcusununda Amerikadaki maçlarını da takip ediyorum. En çok sevdiğim futbol figürleri Messi, Osimhen, Uğurcan Çakır, Neymar ve Salah...
+                </p>
+                <img src="img/futbol.jpg" alt="Futbol" class="card-img-custom mt-auto">
             </div>
-        </section>
+        </div>
 
-       <section class="mb-5">
+        <div class="col-md-6 mb-4">
+            <div class="interest-card p-4 d-flex flex-column h-100">
+                <h4 class="text-warning">NBA ve Gece Mesaisi</h4>
+                <p class="text-white mb-3" style="line-height: 1.7;">
+                    Basketboldan bahsetmesem olmazdı hem spor olarak hem de moda kültürü olarak takip etmekten zevk alıyorum. Maçlar ABD saatine göre oynandığı için maalesef Türkiye'de gece saatlerine denk geliyor. Playofflar dışında çok fazla izleme şansım olmuyor. Desteklediğim takımlar Alperen Şengün etkisiyle Houston Rockets ve Stephen Curry etkisiyle Golden State Warriors.
+                </p>
+                <img src="img/nba.jpg" alt="NBA" class="card-img-custom mt-auto">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+      <section class="mb-5">
     <h2 class="section-title">Rekabetçi Oyunlar</h2>
-    <div class="row align-items-stretch"> <div class="col-md-8 mb-4">
+    <div class="row g-4 align-items-center"> 
+        
+        <div class="col-md-8">
             <div class="interest-card p-4">
                 <h4 class="text-warning mb-3">Takım Oyunu ve Sinir</h4>
-                <p class="text-white" style="line-height: 1.7;">
+                <p style="line-height: 1.7;">
                     <strong class="text-warning">League of Legends:</strong> Sihirdar Vadisi'nde sadece bireysel yetenek değil, makro oyun bilgisi ve anlık takım koordinasyonu da şart. En ufak bir hatada bile maçı kaybedebilirsin; bu yüzden her rol, her an ve her hareket LoL'de aşırı önemli. Bu stresli yapısı, onu hem sinir bozan hem de bağımlılık yapan en sevdiğim oyun kılıyor.
                     <br><br>
                     <strong class="text-warning">FC26:</strong> Futbol tutkumu sanal sahaya taşımamak olmazdı. Ultimate Team'de kadro mühendisliği yapmak ve rekabetçi modlarda o stresi, o siniri yaşamak hem eğlenceli hem de ciddi anlamda bağımlılık yapıcı.
@@ -103,9 +107,12 @@
                 <img src="img/gaming.jpg" alt="EA FC 26" class="card-img-custom mt-auto">
             </div>
         </div>
-        <div class="col-md-4 mb-4">
-            <div class="interest-card border-secondary d-flex justify-content-center align-items-center h-100 p-1">
-                <img src="img/gaming2.jpg" alt="LoL" class="card-img-horizontal">
+
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="interest-card border-secondary overflow-hidden d-inline-block p-0 shadow-lg" style="border-radius: 12px; width: auto; height: auto;">
+                <img src="img/gaming2.jpg" alt="LoL" 
+                     class="img-fluid" 
+                     style="width: 100%; max-width: 350px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
             </div>
         </div>
     </div>
@@ -126,7 +133,7 @@
                                 
                             </div>
                             <div class="col-md-4 mt-4 mt-md-0">
-                                <img src="img/parfum.jpg" alt="Parfümler" class="card-img-horizontal">
+                                <img src="img/parfum.jpeg" alt="Parfümler" class="card-img-horizontal">
                             </div>
                         </div>
                     </div>
