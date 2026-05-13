@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="istanbul.php">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
                     <li class="nav-item"><a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-bold text-warning" href="iletisim.php">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="iletisim.php">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                 </ul>
             </div>
@@ -48,7 +48,7 @@
                         <i class="bi bi-envelope-paper-fill me-2"></i> Mesaj Gönder
                     </h2>
                     
-                    <form id="contactForm" action="iletisim_sonuc.php" method="POST">
+                    <form id="contactForm" action="iletisim_sonuc.php" method="POST" enctype="multipart/form-data">
                         
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -63,7 +63,7 @@
 
                         <div class="mb-3">
                             <label for="telefon" class="form-label text-white">Telefon Numarası (11 Hane)</label>
-                            <input type="text" class="form-control bg-dark text-white border-secondary" id="telefon" name="telefon" v-model.trim="formData.telefon" placeholder="Örn: 05414466036" maxlength="11" required>
+                            <input type="tel" class="form-control bg-dark text-white border-secondary" id="telefon" name="telefon" v-model.trim="formData.telefon" placeholder="Örn: 05414466036" maxlength="11" required>
                         </div>
 
                         <div class="mb-3">
@@ -73,6 +73,7 @@
                                 <option value="Yazılım Projeleri">Yazılım Projeleri</option>
                                 <option value="Finansal Analiz & Borsa">Finansal Analiz & Borsa</option>
                                 <option value="İş Birliği">İş Birliği</option>
+                                <option value="Teknik Destek">Teknik Destek</option>
                             </select>
                         </div>
 
@@ -92,6 +93,11 @@
                             <label for="mesaj" class="form-label text-white">Mesajınız (Max 500 Karakter)</label>
                             <textarea class="form-control bg-dark text-white border-secondary" id="mesaj" name="mesaj" rows="4" maxlength="500" v-model.trim="formData.mesaj" required></textarea>
                         </div>
+                        
+                        <div class="mb-3">
+                            <label for="dosya" class="form-label text-white">Dosya Yükle</label>
+                            <input type="file" class="form-control bg-dark text-white border-secondary" id="dosya" name="dosya">
+                        </div>
 
                         <div class="mb-4 form-check">
                             <input type="checkbox" class="form-check-input" id="onay" name="onay" value="Evet" v-model="formData.onay" required>
@@ -107,7 +113,9 @@
                             <button type="reset" class="btn btn-secondary px-3"><i class="bi bi-trash"></i> Temizle</button>
                             <button type="button" class="btn btn-outline-light px-3" onclick="validateNative()">JS ile Doğrula</button>
                             <button type="button" class="btn btn-warning px-3 fw-bold" @click="validateVue">Vue.js Doğrula</button>
-                            <button type="submit" class="btn btn-primary px-3"><i class="bi bi-send"></i> Klasik Gönder</button>
+                            <button type="button" class="btn btn-primary px-3" onclick="validateNative()">
+                                <i class="bi bi-send"></i> Klasik Gönder
+                            </button>
                         </div>
 
                     </form>
@@ -125,12 +133,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // Form gönderilirken butonları gizleyip spinner çıkaran yardımcı fonksiyon
         function triggerLoading() {
             document.getElementById('form-buttons').style.display = 'none';
             document.getElementById('loading-screen').style.display = 'block';
             setTimeout(() => { document.getElementById('contactForm').submit(); }, 1000);
         }
 
+        // Native JavaScript ile doğrulama: Tüm alanları tek tek kontrol edip Regex kullandım
         function validateNative() {
             let hatalar = "";
             let isim = document.getElementById('isim').value.trim();
@@ -143,10 +153,12 @@
 
             if(isim === "") hatalar += "• İsim boş bırakılamaz.\n";
             
+            // Mail formatı için düzenli ifade (Regex) kontrolü
             let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if(email === "") hatalar += "• E-Posta boş bırakılamaz.\n";
             else if(!emailRegex.test(email)) hatalar += "• E-Posta formatı hatalı.\n";
 
+            // Telefonun sadece 11 rakamdan oluştuğunu kontrol eden Regex
             let telefonRegex = /^[0-9]{11}$/;
             if(telefon === "") hatalar += "• Telefon boş bırakılamaz.\n";
             else if(!telefonRegex.test(telefon)) hatalar += "• Telefon SADECE 11 haneli rakamlardan oluşmalıdır.\n";
@@ -163,6 +175,7 @@
             }
         }
 
+        // Vue.js Uygulaması: Çift yönlü veri bağlama ve reaktif denetim sağladım
         const { createApp } = Vue;
         createApp({
             data() {

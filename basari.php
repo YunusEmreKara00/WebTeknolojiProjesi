@@ -1,5 +1,7 @@
 <?php
-if(!isset($_GET['no'])) {
+// GÜVENLİK 1: Doğrudan URL'ye 'basari.php' yazıp girmeyi engelliyorum.
+// Eğer URL'de 'no' parametresi yoksa, kullanıcıyı paşa paşa login ekranına geri yolluyorum.
+if(!isset($_GET['no']) || empty($_GET['no'])) {
     header("Location: login.php");
     exit();
 }
@@ -13,6 +15,7 @@ if(!isset($_GET['no'])) {
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-dark text-white d-flex flex-column" style="min-height: 100vh;">
@@ -25,17 +28,18 @@ if(!isset($_GET['no'])) {
 
     <main class="container main-container d-flex align-items-center justify-content-center flex-grow-1">
         <div class="text-center p-5 rounded border border-success bg-dark shadow-lg">
+            
             <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
             
-            <h1 class="display-4 fw-bold mt-3">Hoşgeldiniz</h1>
-            
-            <p class="lead text-warning fs-2">
-                <?php echo htmlspecialchars($_GET['no']); ?>
-            </p>
+            <h1 class="display-5 fw-bold mt-4 mb-3">
+                Hoşgeldiniz <span class="text-warning"><?php echo htmlspecialchars($_GET['no']); ?></span>
+            </h1>
             
             <hr class="border-secondary">
-            <p class="text-muted">Giriş işlemi başarıyla doğrulandı.</p>
-            <a href="index.php" class="btn btn-outline-light mt-3">Sitede Gezinmeye Devam Et</a>
+            
+            <p class="text-muted mb-4">Öğrenci bilgi sistemi doğrulaması başarıyla tamamlandı.</p>
+            
+            <a href="index.php" class="btn btn-outline-light px-4 py-2 fw-bold">Sitede Gezinmeye Devam Et</a>
         </div>
     </main>
 

@@ -16,7 +16,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Yunus Emre Kara</a>
+            <a class="navbar-brand fw-bold" href="index.php">YUNUS EMRE KARA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -65,7 +65,7 @@
 
         <!-- Sağ taraf Profil Fotoğrafı kısmı -->
         <div class="col-md-5 text-center mt-4 mt-md-0">
-            <img src="img/profil.jpg" alt="Yunus Emre Kara" class="img-fluid rounded-4 shadow-lg border border-secondary" style="max-height: 400px; width: 100%; object-fit: cover;">
+            <img src="img/profil.jpeg" alt="Yunus Emre Kara" class="img-fluid rounded-4 shadow-lg border border-secondary" style="max-height: 400px; width: 100%; object-fit: cover;">
         </div>
     </div> 
 
@@ -84,7 +84,7 @@
                     <small class="mt-2 d-block text-center" style="color: #cccccc;">Beni derinden etkileyen ve aşırı sevdiğim Metallica'nın konser kesiti</small>
                 </div>
 
-                <!-- Bağlantılar (Sosyal Medya-GitHub) -->
+                <!-- Bağlantılar (İnstagram-GitHub) -->
                 <div class="col-md-5 text-center">
                     <h4 class="mb-3">Bağlantılarım</h4>
                     <p class="mb-4" style="color: #cccccc;">Kodlarımı incelemek veya bana ulaşmak için aşağıdaki bağlantıları kullanabilirsiniz.</p>

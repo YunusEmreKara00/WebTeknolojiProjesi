@@ -1,29 +1,101 @@
-/* Arka Plan ve Yazı Rengi */
+/* =========================================
+   1. GENEL AYARLAR VE TEMA (DARK/OPIUM)
+   ========================================= */
 body {
     background: linear-gradient(180deg, #121212 0%, #000000 100%) !important;
-    background-attachment: fixed; /* Sayfa kayarsa arka plan sabit kalsın diye */
-    color: #ffffff !important; /* Metin rengi beyaz yaptım  */
+    background-attachment: fixed; /* Sayfa kayarsa arka plan sabit kalır */
+    color: #ffffff !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     margin: 0;
 }
-/* Başlıklar */
+
 h1, h2, h3, h4, h5, h6 {
-    color: #ffffff; /* Başlıkların rengi */
+    color: #ffffff;
     font-weight: 700;
-    letter-spacing: 1px; /* Harfler arasında hafif boşluk bıraktım */
+    letter-spacing: 1px;
 }
 
-/*  "Code, Finance & Streetwear" Yazısının rengini ayarladım */
-.text-primary {
-    color: #888888 !important; 
+/*  metin rengi  */
+::selection {
+    background-color: #ffffff;
+    color: #000000;
 }
 
+/* =========================================
+   2. SCROLLBAR (KAYDIRMA ÇUBUĞU)
+   ========================================= */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #444444; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #ffffff; }
+
+/* =========================================
+   3. NAVBAR (ÜST MENÜ)
+   ========================================= */
+   /* Aktif sayfanın menüdeki sabit rengi ve kalınlığı */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #f3a000 !important; 
+    font-weight: bold !important;
+}
+.bg-dark {
+    background-color: #000000 !important;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #aaaaaa;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+/* Menü altı çizgi animasyonu */
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   4. ORTAK BİLEŞENLER (BUTON, BAŞLIK, RESİM)
+   ========================================= */
+.main-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    color: #f3a000;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text-primary { color: #888888 !important; }
+
+/*  Özel Buton */
 .btn-primary {
     background: none !important;
     border: none !important;
-    /*  alt çerçeve tasarımı */
-    border-bottom: 2px solid #555 !important; 
+    border-bottom: 2px solid #555 !important;
     color: #ffffff !important;
     border-radius: 0 !important;
     padding: 8px 5px !important;
@@ -31,145 +103,97 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 2px;
-    /* Hover efekti için geçiş süresi */
-    transition: 0.4s ease; 
+    transition: 0.4s ease;
 }
-
 .btn-primary:hover {
     border-bottom: 2px solid #ffffff !important;
     letter-spacing: 4px;
 }
 
-/* Profil.jpg için  */
+/* Resim Filtreleri  */
 img {
     border-radius: 8px;
-    filter: grayscale(30%) contrast(110%); /* Fotoğrafı daha soluk ve kontrastlı yaptım  */
-    border: 2px solid #222222; /* Etrafına koyu gri çerçeve */
+    filter: grayscale(30%) contrast(110%);
+    border: 2px solid #222222;
 }
 
-/* Üst Menü Ayarı */
-.bg-dark {
-    background-color: #000000 !important; /* Navbar'ı tam siyah yaptık */
-    border-bottom: 1px solid #1a1a1a; /* Altına çok hafif bir çizgi çektik siteyle karışmasın diye */
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #aaaaaa;
-    text-transform: uppercase; /* Menü yazılarını tamamen büyük harf yaptım */
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffffff;
-}
-
-/* profil.jpg ye hover efekti */
 .img-fluid {
     transition: transform 0.5s ease;
     cursor: pointer;
 }
-
 .img-fluid:hover {
-    transform: scale(1.03); /* Hafifçe büyümesi için */
-    filter: brightness(1.1); /* Biraz aydınlanma */
+    transform: scale(1.03);
+    filter: brightness(1.1);
 }
 
+/* =========================================
+   5. SAYFA ÖZEL TASARIMLARI
+   ========================================= */
 
-/* Menü linklerinin altına animasyonlu çizgi için */
-.nav-link {
-    position: relative;
+/* --- A. Özgeçmiş & İletişim  --- */
+.cv-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 30px;
     transition: 0.3s;
 }
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff; /* Çizgi rengi beyaz */
-    transition: 0.3s ease-in-out;
+.cv-card:hover {
+    border-color: #f3a000;
+    box-shadow: 0 4px 15px rgba(243, 160, 0, 0.1);
 }
 
-.nav-link:hover::after {
-    width: 100%; /* Mouse gelince çizgi boydan boya uzuyor. */
-}
-/* Kaydırma çubuğu için */
+.cv-title { color: #f3a000; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; font-weight: bold; text-transform: uppercase; font-size: 1.2rem; }
+.icon-warning { color: #f3a000; margin-right: 10px; font-size: 1.2rem; }
+.profile-img { width: 180px; height: 180px; object-fit: cover; border: 3px solid #f3a000; padding: 3px; background-color: #121212; }
+.timeline { border-left: 2px solid #333; padding-left: 20px; margin-left: 10px; }
+.timeline-item { position: relative; margin-bottom: 25px; }
+.timeline-item::before { content: ""; position: absolute; left: -27px; top: 5px; width: 12px; height: 12px; background-color: #1a1a1a; border: 2px solid #f3a000; border-radius: 50%; }
+.contact-list li { margin-bottom: 12px; font-size: 0.9rem; list-style: none; }
 
-::-webkit-scrollbar {
-    width: 8px; 
-}
-
-::-webkit-scrollbar-track {
-    background: #0a0a0a; 
-}
-
-::-webkit-scrollbar-thumb {
-    background: #444444; /* Kaydırdığımız o çubuğun rengi */
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #ffffff; /* Üzerine gelince beyaz parlıyor. */
-}
-
-/* Metinlerin mouse la üstünden geçince mavi renk olmasın diye */
-::selection {
-    background-color: #ffffff; /* Seçilen metnin arka planı beyaz olur */
-    color: #000000; /* Seçilen metnin kendisi siyah olur */
-}
-/* --- İLETİŞİM FORMU VE ORTAK YAPILAR --- */
-.main-container { margin-top: 100px; margin-bottom: 50px; }
-
-.cv-card { background-color: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 30px; transition: 0.3s; }
-.cv-card:hover { border-color: #f3a000; box-shadow: 0 4px 15px rgba(243, 160, 0, 0.1); }
-
-.section-title { color: #f3a000; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; font-weight: bold; text-transform: uppercase; }
-
-/* Form Elemanları Siyah tema */
+/* Form Elemanları ve Placeholder Ayarları */
 .form-control, .form-select { background-color: #222; border: 1px solid #444; color: #fff; }
 .form-control:focus, .form-select:focus { background-color: #2a2a2a; border-color: #f3a000; color: #fff; box-shadow: 0 0 0 0.25rem rgba(243, 160, 0, 0.25); }
 .form-label { color: #fff; font-weight: 500; }
 .form-check-label { color: #ccc; }
-
-/* Form Gönderilirken Çıkan Yükleme Ekranı */
 #loading-screen { display: none; }
-/* =========================================
-   GENEL YAPI VE İLETİŞİM FORMU AYARLARI
-   ========================================= */
 
-/* Sayfa içeriklerinin navbar altında kalmasını ve footer'a yapışmasını engelliyo */
-.main-container {
-    margin-top: 100px;
-    margin-bottom: 50px;
+/* Kutu içindeki yönlendirme yazılarının koyu temada kaybolmamasını sağlar */
+.form-control::placeholder,
+.form-select::placeholder {
+    color: #888888 !important; 
+    opacity: 1 !important; 
+    font-style: italic; 
 }
 
-/* İletişim sayfasındaki yükleme ekranı başlangıçta gizli olmalı */
-#loading-screen {
-    display: none;
+/* --- B. İlgi Alanlarım --- */
+.interest-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: 0.3s;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; 
 }
-/* --- İLGE ALANLARI RESİM DÜZENLEME  --- */
+.interest-card:hover {
+    border-color: #f3a000;
+    box-shadow: 0 4px 15px rgba(243, 160, 0, 0.2);
+    transform: translateY(-5px);
+}
+.interest-card img { margin-top: auto; }
 
-/* API'den gelen müzik kapakları ve  resimlerin hepsini aynı boya sabitledim */
 .api-image, .card-img-custom, .card-img-horizontal {
     width: 100% !important;
-    height: 250px !important; 
-    object-fit: cover !important; 
+    height: 250px !important;
+    object-fit: cover !important;
     object-position: center !important;
     border-radius: 8px !important;
 }
 
-/* Kartların boylarını birbirine eşitlemek için */
-.interest-card {
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content:间-between !important;
-}
-
-/* Kartın içindeki yazılarla resim arasında boşluk bırakma */
-.interest-card img {
-    margin-top: auto; 
-}
+/* --- C. Takımımız (Galatasaray) --- */
+.gs-text { color: #f3a000; }
+.gs-bg { background-color: #a32638; }
+.media-border { border: 2px solid #333; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }

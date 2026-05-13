@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Şehrim: İstanbul | Yunus Emre Kara</title>
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- css e bağladım -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!--  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Yunus Emre Kara</a>
+            <a class="navbar-brand" href="index.php">Yunus Emre Kara</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,21 +25,19 @@
                     <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
                     <li class="nav-item"><a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-2" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Ana İçerik Alanı -->
-    <div class="container mt-5 py-5">
-        <div class="row text-center mb-5">
+    <main class="container mt-5 py-5">
+        <header class="row text-center mb-5">
             <h1 class="display-4 fw-bold">İki Kıta, Tek Şehir</h1>
             <h2 class="h4 text-primary mb-4">Dünyanın Merkezi ve Doğup Büyüdüğüm Yer: İstanbul</h2>
-        </div>
+        </header>
 
-        <!-- 5 resimli slider ekledim -->
-        <div class="row justify-content-center mb-5">
+        <section class="row justify-content-center mb-5">
             <div class="col-md-9">
                 <div id="istanbulSlider" class="carousel slide shadow-lg" data-bs-ride="carousel">
                     <div class="carousel-inner" style="border-radius: 8px; border: 2px solid #222222;">
@@ -59,11 +54,10 @@
                             <img src="img/ist4.jpg" class="d-block w-100" alt="İstanbul 4" style="height: 450px; object-fit: cover; border: none;">
                         </div>
                         <div class="carousel-item">
-                         <img src="img/ist5.jpg" class="d-block w-100" alt="İstanbul 5" style="height: 450px; object-fit: cover; border: none;">
+                            <img src="img/ist5.jpg" class="d-block w-100" alt="İstanbul 5" style="height: 450px; object-fit: cover; border: none;">
                         </div>
                     </div>
                     
-                    <!--  Bootstrap buton yapısı kullandm -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#istanbulSlider" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Önceki</span>
@@ -74,20 +68,19 @@
                     </button>
                 </div>
             </div>
-        </div>
-        <!-- Şehir tanıtım paragrafı ekledim kendi yorumlarımla  -->
-        <div class="row justify-content-center mb-5">
-    <div class="col-md-10 text-center text-md-start">
-        <p class="lead" style="color: #cccccc; line-height: 1.8;">
-            İstanbul; Beykoz ilçesinde doğup büyüdüğüm, üniversiteye kadar tüm eğitim hayatımı tamamladığım şehirdir. Özellikle Beykoz; Boğaz'ın büyüleyici doğası, sakinliği ve kendine has atmosferiyle benim için şehrin en özel noktası ve hâlâ yaşadığım yerdir. 
-            <br><br>
-            İstanbul dışından birisi gezmeye gelirse ona önereceğim başlıca yerler arasında; Beşiktaş, Sarıyer, Beyoğlu ve Kadıköy gibi hareketli semtlerin yanı sıra Yerebatan Sarnıcı ve Ayasofya Camii gibi tarihi miraslar yer alıyor. 16 milyonu aşan devasa nüfusuyla oldukça kalabalık ve kaos içinde olan bu şehrin, trafiği ise bence tek sıkıntılı kısmı. Yine de her ilçesi, her mahallesi ve her köşesi ayrı bir tarih barındıran İstanbul, iki kıtayı birleştiren eşsiz ruhuyla vazgeçilmezimdir.
-        </p>
-    </div>
-</div>
+        </section>
 
-        <!-- ŞEHİR BİLGİLERİ TABLOSU -->
-        <div class="row justify-content-center">
+        <section class="row justify-content-center mb-5">
+            <div class="col-md-10 text-center text-md-start">
+                <p class="lead" style="color: #cccccc; line-height: 1.8;">
+                    İstanbul; Beykoz ilçesinde doğup büyüdüğüm, üniversiteye kadar tüm eğitim hayatımı tamamladığım şehirdir. Özellikle Beykoz; Boğaz'ın büyüleyici doğası, sakinliği ve kendine has atmosferiyle benim için şehrin en özel noktası ve hâlâ yaşadığım yerdir. 
+                    <br><br>
+                    İstanbul dışından birisi gezmeye gelirse ona önereceğim başlıca yerler arasında; Beşiktaş, Sarıyer, Beyoğlu ve Kadıköy gibi hareketli semtlerin yanı sıra Yerebatan Sarnıcı ve Ayasofya Camii gibi tarihi miraslar yer alıyor. 16 milyonu aşan devasa nüfusuyla oldukça kalabalık ve kaos içinde olan bu şehrin, trafiği ise bence tek sıkıntılı kısmı. Yine de her ilçesi, her mahallesi ve her köşesi ayrı bir tarih barındıran İstanbul, iki kıtayı birleştiren eşsiz ruhuyla vazgeçilmezimdir.
+                </p>
+            </div>
+        </section>
+
+        <section class="row justify-content-center">
             <div class="col-md-9">
                 <h3 class="fw-bold mb-4">Şehir Bilgileri</h3>
                 <table class="table table-dark table-striped table-bordered border-secondary">
@@ -104,19 +97,24 @@
                         </tr>
                         <tr>
                             <td class="fw-bold">Gezilecek Yerler</td>
-                            <td>Galata Kulesi, Ayasofya Camii, Yerebatan Sarnıcı, Kadıköy Moda Sahili, Beşiktaş, Bebek Sahil ve sayamadığım bir sürü yer</td>
+                            <td>Galata Kulesi, Ayasofya Camii, Yerebatan Sarnıcı, Kadıköy Moda Sahili, Beşiktaş, Bebek Sahil ve sayamadığım bir sürü yer.</td>
                         </tr>
                         <tr>
                             <td class="fw-bold">Favori Mekanlarım</td>
-                            <td>Yaşadığım ilçe olan Beykoz sık sık gittiğim Kadıköy ve Beşiktaş</td>
+                            <td>Yaşadığım ilçe olan Beykoz, sık sık gittiğim Kadıköy ve Beşiktaş.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <!-- Bootstrap JS -->
+    <footer class="bg-dark text-center py-4 border-top border-secondary mt-5">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2026 Yunus Emre Kara. Semantik HTML5 ve Bootstrap ile kodlanmıştır.</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

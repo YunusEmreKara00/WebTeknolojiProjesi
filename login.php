@@ -7,7 +7,6 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-dark text-light d-flex flex-column" style="min-height: 100vh;">
@@ -26,7 +25,7 @@
                     <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
                     <li class="nav-item"><a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-bold text-warning" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="login.php">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -38,7 +37,7 @@
                 <div class="text-center mb-4">
                     <i class="bi bi-person-lock text-warning" style="font-size: 3rem;"></i>
                     <h2 class="fw-bold text-white mt-2">Öğrenci Girişi</h2>
-                    <p class="text-muted small">Lütfen SAÜ e-posta adresinizle giriş yapın.</p>
+                    <p class="text-white-50 small">Lütfen SAÜ e-posta adresinizle giriş yapın.</p>
                 </div>
 
                 <form action="login_islem.php" method="POST" id="loginForm" onsubmit="return validateLogin()">
@@ -46,8 +45,8 @@
                     <div class="mb-3">
                         <label for="username" class="form-label">Kullanıcı Adı (E-Posta)</label>
                         <input type="email" class="form-control bg-dark text-white border-secondary" 
-                               id="username" name="username" 
-                               placeholder="b251210088@sakarya.edu.tr" required>
+                                   id="username" name="username" 
+                        placeholder="b2512100088@sakarya.edu.tr" required>
                     </div>
 
                     <div class="mb-4">
@@ -67,7 +66,7 @@
                         <button type="submit" class="btn btn-warning fw-bold py-2">
                             GİRİŞ YAP <i class="bi bi-box-arrow-in-right ms-1"></i>
                         </button>
-                        <a href="index.php" class="btn btn-link text-muted btn-sm text-decoration-none">Ana Sayfaya Dön</a>
+                        <a href="index.php" class="btn btn-link text-light btn-sm text-decoration-none">Ana Sayfaya Dön</a>
                     </div>
                 </form>
             </section>
@@ -92,8 +91,7 @@
             if (username === "") {
                 hatalar += "• Kullanıcı adı (E-Posta) alanı boş bırakılamaz.\n";
             } else {
-                
-                // Sonunda kesinlikle @sakarya.edu.tr olmak zorunda
+                // Sadece @sakarya.edu.tr uzantılı mailleri kabul eden özel Regex
                 let saueMailRegex = /^[a-zA-Z0-9._%+-]+@sakarya\.edu\.tr$/;
                 if (!saueMailRegex.test(username)) {
                     hatalar += "• Lütfen geçerli bir '@sakarya.edu.tr' uzantılı öğrenci maili giriniz.\n";
@@ -105,10 +103,10 @@
                 hatalar += "• Şifre (Öğrenci No) alanı boş bırakılamaz.\n";
             }
 
-            // hata varsa formu durdurup uyarı vermesi için
+            // Hata varsa uyarı ver ve formun POST edilmesini engelle
             if (hatalar !== "") {
                 alert("GİRİŞ HATASI:\n\n" + hatalar);
-                return false; // Formun PHP'ye gitmesini engeller
+                return false; 
             }
 
             return true;

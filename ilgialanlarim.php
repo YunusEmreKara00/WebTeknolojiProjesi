@@ -4,24 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İlgi Alanlarım - Yunus Emre Kara</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* arka planı siyah yaptım */
-        body { background-color: #121212; color: #ffffff; }
-        
-        /* Başlıkların altını çizdim */
-        .section-title { color: #f3a000; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; text-transform: uppercase; }
-        
-        /* Kartlara hover efekti verdim */
-        .interest-card { background-color: #1a1a1a; border: 1px solid #333; border-radius: 8px; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
-        .interest-card:hover { border-color: #f3a000; box-shadow: 0 4px 15px rgba(243, 160, 0, 0.2); transform: translateY(-5px); }
-        
-        /* API ve statik resimlerin boyutları farklı olabileceğinden object-fit kullandım */
-        .api-image { border-radius: 8px 8px 0 0; width: 100%; height: 250px; object-fit: cover; }
-        .card-img-custom { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-top: 15px; }
-        .card-img-horizontal { width: 100%; height: 100%; min-height: 200px; object-fit: cover; border-radius: 6px; }
-    </style>
 </head>
 <body>
 
@@ -37,7 +23,7 @@
                     <li class="nav-item"><a class="nav-link" href="ozgecmis.php">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="istanbul.php">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-bold text-warning" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                 </ul>
@@ -66,57 +52,53 @@
         </section>
 
         <section class="mb-5">
-    <h2 class="section-title">Spor Sevgim</h2>
-    <div class="row align-items-stretch">
-        
-        <div class="col-md-6 mb-4">
-            <div class="interest-card p-4 d-flex flex-column h-100">
-                <h4 class="text-warning">Global Futbol ve Galatasaray</h4>
-                <p class="text-white mb-3" style="line-height: 1.7;">
-                    Futboldan çok bahsettim ama ilgi alanlarım kısmına da koymazsam olmazdı. Galatasaray ile birlikte Avrupa Futbolunu izlemeyi takip etmeyi hayatımın bir parçası haline getirdim. Ayriyetten Messi gibi bana göre tarihin en iyi futbolcusununda Amerikadaki maçlarını da takip ediyorum. En çok sevdiğim futbol figürleri Messi, Osimhen, Uğurcan Çakır, Neymar ve Salah...
-                </p>
-                <img src="img/futbol.jpg" alt="Futbol" class="card-img-custom mt-auto">
-            </div>
-        </div>
+            <h2 class="section-title">Spor Sevgim</h2>
+            <div class="row align-items-stretch">
+                <div class="col-md-6 mb-4">
+                    <div class="interest-card p-4 d-flex flex-column h-100">
+                        <h4 class="text-warning">Global Futbol ve Galatasaray</h4>
+                        <p class="text-white mb-3" style="line-height: 1.7;">
+                            Futboldan çok bahsettim ama ilgi alanlarım kısmına da koymazsam olmazdı. Galatasaray ile birlikte Avrupa Futbolunu izlemeyi takip etmeyi hayatımın bir parçası haline getirdim. Ayriyetten Messi gibi bana göre tarihin en iyi futbolcusununda Amerikadaki maçlarını da takip ediyorum. En çok sevdiğim futbol figürleri Messi, Osimhen, Uğurcan Çakır, Neymar ve Salah...
+                        </p>
+                        <img src="img/futbol.jpg" alt="Futbol" class="card-img-custom mt-auto">
+                    </div>
+                </div>
 
-        <div class="col-md-6 mb-4">
-            <div class="interest-card p-4 d-flex flex-column h-100">
-                <h4 class="text-warning">NBA ve Gece Mesaisi</h4>
-                <p class="text-white mb-3" style="line-height: 1.7;">
-                    Basketboldan bahsetmesem olmazdı hem spor olarak hem de moda kültürü olarak takip etmekten zevk alıyorum. Maçlar ABD saatine göre oynandığı için maalesef Türkiye'de gece saatlerine denk geliyor. Playofflar dışında çok fazla izleme şansım olmuyor. Desteklediğim takımlar Alperen Şengün etkisiyle Houston Rockets ve Stephen Curry etkisiyle Golden State Warriors.
-                </p>
-                <img src="img/nba.jpg" alt="NBA" class="card-img-custom mt-auto">
+                <div class="col-md-6 mb-4">
+                    <div class="interest-card p-4 d-flex flex-column h-100">
+                        <h4 class="text-warning">NBA ve Gece Mesaisi</h4>
+                        <p class="text-white mb-3" style="line-height: 1.7;">
+                            Basketboldan bahsetmesem olmazdı hem spor olarak hem de moda kültürü olarak takip etmekten zevk alıyorum. Maçlar ABD saatine göre oynandığı için maalesef Türkiye'de gece saatlerine denk geliyor. Playofflar dışında çok fazla izleme şansım olmuyor. Desteklediğim takımlar Alperen Şengün etkisiyle Houston Rockets ve Stephen Curry etkisiyle Golden State Warriors.
+                        </p>
+                        <img src="img/nba.jpg" alt="NBA" class="card-img-custom mt-auto">
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-    </div>
-</section>
+        <section class="mb-5">
+            <h2 class="section-title">Rekabetçi Oyunlar</h2>
+            <div class="row g-4 align-items-center"> 
+                <div class="col-md-8">
+                    <div class="interest-card p-4">
+                        <h4 class="text-warning mb-3">Takım Oyunu ve Sinir</h4>
+                        <p style="line-height: 1.7;">
+                            <strong class="text-warning">League of Legends:</strong> Sihirdar Vadisi'nde sadece bireysel yetenek değil, makro oyun bilgisi ve anlık takım koordinasyonu da şart. En ufak bir hatada bile maçı kaybedebilirsin; bu yüzden her rol, her an ve her hareket LoL'de aşırı önemli. Bu stresli yapısı, onu hem sinir bozan hem de bağımlılık yapan en sevdiğim oyun kılıyor.
+                            <br><br>
+                            <strong class="text-warning">FC26:</strong> Futbol tutkumu sanal sahaya taşımamak olmazdı. Ultimate Team'de kadro mühendisliği yapmak ve rekabetçi modlarda o stresi, o siniri yaşamak hem eğlenceli hem de ciddi anlamda bağımlılık yapıcı.
+                        </p>
+                        <img src="img/gaming.jpg" alt="EA FC 26" class="card-img-custom mt-auto">
+                    </div>
+                </div>
 
-      <section class="mb-5">
-    <h2 class="section-title">Rekabetçi Oyunlar</h2>
-    <div class="row g-4 align-items-center"> 
-        
-        <div class="col-md-8">
-            <div class="interest-card p-4">
-                <h4 class="text-warning mb-3">Takım Oyunu ve Sinir</h4>
-                <p style="line-height: 1.7;">
-                    <strong class="text-warning">League of Legends:</strong> Sihirdar Vadisi'nde sadece bireysel yetenek değil, makro oyun bilgisi ve anlık takım koordinasyonu da şart. En ufak bir hatada bile maçı kaybedebilirsin; bu yüzden her rol, her an ve her hareket LoL'de aşırı önemli. Bu stresli yapısı, onu hem sinir bozan hem de bağımlılık yapan en sevdiğim oyun kılıyor.
-                    <br><br>
-                    <strong class="text-warning">FC26:</strong> Futbol tutkumu sanal sahaya taşımamak olmazdı. Ultimate Team'de kadro mühendisliği yapmak ve rekabetçi modlarda o stresi, o siniri yaşamak hem eğlenceli hem de ciddi anlamda bağımlılık yapıcı.
-                </p>
-                <img src="img/gaming.jpg" alt="EA FC 26" class="card-img-custom mt-auto">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="interest-card border-secondary overflow-hidden d-inline-block p-0 shadow-lg" style="border-radius: 12px; width: auto; height: auto;">
+                        <img src="img/gaming2.jpg" alt="LoL" class="img-fluid" style="width: 100%; max-width: 350px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="col-md-4 d-flex justify-content-center">
-            <div class="interest-card border-secondary overflow-hidden d-inline-block p-0 shadow-lg" style="border-radius: 12px; width: auto; height: auto;">
-                <img src="img/gaming2.jpg" alt="LoL" 
-                     class="img-fluid" 
-                     style="width: 100%; max-width: 350px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
-            </div>
-        </div>
-    </div>
-</section>
         <section class="mb-5">
             <h2 class="section-title">Niş & Tasarımcı Parfümler</h2>
             <div class="row">
@@ -126,11 +108,8 @@
                             <div class="col-md-8">
                                 <h4 class="text-warning">Performans ve Yayılım</h4>
                                 <p class="text-white mb-0" style="line-height: 1.7;">
-                                    Sadece güzel kokmakla kalmayıp, girdiğim ortamda ben buradayım diyen kokulara özel bir ilgim var.
-                                     Niş ve Koleksiyon ürünleri koklamayı denemeyi çok seviyorum ama fiyatlar tabi çok pahalı olduğu için çok fazla ürünüm yok ama ilerde koleksiyonumu genişletmek istiyorum
-                                     . Kalıcılık benim için bir parfümdeki en kritik detaydır. 
+                                    Sadece güzel kokmakla kalmayıp, girdiğim ortamda ben buradayım diyen kokulara özel bir ilgim var. Niş ve Koleksiyon ürünleri koklamayı denemeyi çok seviyorum ama fiyatlar tabi çok pahalı olduğu için çok fazla ürünüm yok ama ilerde koleksiyonumu genişletmek istiyorum. Kalıcılık benim için bir parfümdeki en kritik detaydır. 
                                 </p>
-                                
                             </div>
                             <div class="col-md-4 mt-4 mt-md-0">
                                 <img src="img/parfum.jpeg" alt="Parfümler" class="card-img-horizontal">
@@ -144,14 +123,15 @@
     </div>
 
     <script>
+        // DOM yüklendikten sonra API isteklerini başlatıyorum
         document.addEventListener('DOMContentLoaded', function() {
             
-            // API'den albüm çektim.
+            // iTunes API üzerinden müzik albümü verilerini çekmek için endpointler
             const kanyeGraduation = 'https://itunes.apple.com/search?term=kanye+west+graduation&entity=album&limit=1';
             const kanyeLateReg = 'https://itunes.apple.com/search?term=kanye+west+late+registration&entity=album&limit=1';
             const drakeUrl = 'https://itunes.apple.com/search?term=drake&entity=album&limit=2';
             
-            // Promise.all ile bu 3  API yi aynı anda çekiyorum
+            // Performans için Promise.all kullanarak 3 ayrı API isteğini asenkron ve eşzamanlı çekiyorum
             Promise.all([
                 fetch(kanyeGraduation).then(response => response.json()),
                 fetch(kanyeLateReg).then(response => response.json()),
@@ -161,17 +141,19 @@
                 const albumsContainer = document.getElementById('kanye-albums');
                 const loadingMessage = document.getElementById('loading-message');
                 
+                // Veriler gelince yükleniyor animasyonunu gizledim
                 loadingMessage.style.display = 'none';
                 
-                // ES6 Spread (...) operatörü ile API leri tek dizinde birleştirdim
+                // ES6 Spread operatörü ile 3 farklı API cevabını tek bir dizide birleştirdim
                 const combinedAlbums = [
                     ...dataArray[0].results, 
                     ...dataArray[1].results, 
                     ...dataArray[2].results
                 ];
                 
+                // Gelen verileri döngüye sokup HTML kartlarına dönüştürüyorum
                 combinedAlbums.forEach(album => {
-                    // HD Kapak Fotoğrafı yaptım
+                    // API'den gelen 100x100 resimleri string manipülasyonu ile 600x600 HD kaliteye çevirdim
                     const imageUrl = album.artworkUrl100.replace('100x100bb', '600x600bb');
                     
                     const cardHtml = `
@@ -189,6 +171,7 @@
                 });
             })
             .catch(error => {
+                // Herhangi bir API hatasında projeyi patlatmamak için hata yakalama 
                 console.error('API Hatası:', error);
                 document.getElementById('loading-message').innerHTML = '<p class="text-danger fw-bold">API verisi çekilirken bir hata oluştu.</p>';
             });
