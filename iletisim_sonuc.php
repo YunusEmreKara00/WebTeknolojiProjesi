@@ -13,9 +13,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">YUNUS EMRE KARA</a>
+            <a class="navbar-brand fw-bold" href="index.html">YUNUS EMRE KARA</a>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="iletisim.php"><i class="bi bi-arrow-left"></i> İletişime Dön</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html"><i class="bi bi-arrow-left"></i> İletişime Dön</a></li>
             </ul>
         </div>
     </nav>
@@ -28,7 +28,7 @@
                 // GÜVENLİK: Sayfaya doğrudan URL üzerinden girilmesini engelledim. 
                 // Sadece form üzerinden POST ile gelenleri kabul ediyorum.
                 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-                    header("Location: iletisim.php");
+                    header("Location: iletisim.html");
                     exit;
                 }
 
@@ -64,7 +64,7 @@
                     echo "<p>Sunucu tarafı doğrulamasından geçemediniz. Hatalar:</p><ul>";
                     foreach ($hatalar as $hata) { echo "<li>" . htmlspecialchars($hata) . "</li>"; }
                     echo "</ul><hr>";
-                    echo "<a href='iletisim.php' class='btn btn-outline-danger'><i class='bi bi-arrow-left'></i> Forma Geri Dön</a>";
+                    echo "<a href='iletisim.html' class='btn btn-outline-danger'><i class='bi bi-arrow-left'></i> Forma Geri Dön</a>";
                     echo "</div>";
                 } 
                 else {
@@ -107,7 +107,7 @@
                     echo "</table>";
                     echo "</div></div>";
                     
-                    echo "<div class='text-center mt-4'><a href='index.php' class='btn btn-warning fw-bold'>Ana Sayfaya Dön</a></div>";
+                    echo "<div class='text-center mt-4'><a href='index.html' class='btn btn-warning fw-bold'>Ana Sayfaya Dön</a></div>";
                 }
                 ?>
 

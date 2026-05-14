@@ -22,7 +22,7 @@ if(!isset($_GET['no']) || empty($_GET['no'])) {
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">YUNUS EMRE KARA</a>
+            <a class="navbar-brand fw-bold" href="index.html">YUNUS EMRE KARA</a>
         </div>
     </nav>
 
@@ -39,7 +39,7 @@ if(!isset($_GET['no']) || empty($_GET['no'])) {
             
             <p class="text-muted mb-4">Öğrenci bilgi sistemi doğrulaması başarıyla tamamlandı.</p>
             
-            <a href="index.php" class="btn btn-outline-light px-4 py-2 fw-bold">Sitede Gezinmeye Devam Et</a>
+            <a href="index.html" class="btn btn-outline-light px-4 py-2 fw-bold">Sitede Gezinmeye Devam Et</a>
         </div>
     </main>
 

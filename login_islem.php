@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Kaçak girişleri ana sayfaya yönlendirerek sistemi koruyorum.
-    header("Location: index.php");
+    header("Location: index.html");
     exit();
 }
 ?>

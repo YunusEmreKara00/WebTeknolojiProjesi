@@ -13,18 +13,18 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">YUNUS EMRE KARA</a>
+            <a class="navbar-brand fw-bold" href="index.html">YUNUS EMRE KARA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Hakkımda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ozgecmis.php">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link" href="istanbul.php">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="takimimiz.php">Takımımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgialanlarim.php">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="istanbul.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link active" href="login.php">Login</a></li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
                         <button type="submit" class="btn btn-warning fw-bold py-2">
                             GİRİŞ YAP <i class="bi bi-box-arrow-in-right ms-1"></i>
                         </button>
-                        <a href="index.php" class="btn btn-link text-light btn-sm text-decoration-none">Ana Sayfaya Dön</a>
+                        <a href="index.html" class="btn btn-link text-light btn-sm text-decoration-none">Ana Sayfaya Dön</a>
                     </div>
                 </form>
             </section>
